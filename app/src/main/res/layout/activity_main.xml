@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/teal"
     tools:context=".MainActivity">
 
     <TextView
@@ -35,19 +35,21 @@
         app:layout_constraintVertical_bias="0.038" />
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="124dp"
         app:cardBackgroundColor="@color/red"
-        app:strokeColor="@color/orange"
-        app:strokeWidth="7dp"
         app:cardElevation="1dp"
+        app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="1.0"
+        app:strokeColor="@color/orange"
+        app:strokeWidth="7dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -94,6 +96,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnToLima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pertemuan 5"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
