@@ -6,4 +6,8 @@
     <color name="red">#E76F51</color>
     <color name="yellow">#E9C46A</color>
     <color name="teal">#36BA98</color>
+    <color name="heritageGreen">#1E5631</color>
+    <color name="warmAmber">#F4A261</color>
+    <color name="slateDark">#2B2D42</color>
+    <color name="softLight">#F8F9FA</color>
 </resources>

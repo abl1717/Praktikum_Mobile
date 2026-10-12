@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal"
+    android:background="@color/softLight"
     tools:context=".pertemuan_5.LimaActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/red"
+            android:background="@color/heritageGreen"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -42,15 +42,18 @@
 
             <Button
                 android:id="@+id/btnWebView"
+                android:fontFamily="@font/plusjakartasans_bold"
+                android:textColor="@color/softLight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/heritageGreen"
                 android:text="Web View" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
+                android:fontFamily="@font/plusjakartasans_regular"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean libero nibh, rhoncus ut lobortis eget, dictum quis libero. Suspendisse potenti. Pellentesque posuere quam at venenatis consequat. Sed nec felis eget libero pretium faucibus. Nunc consequat quis ex a tincidunt. Morbi eu mauris vitae augue elementum lobortis sit amet vitae tortor. Maecenas eu ornare dui, in congue sapien. Vestibulum auctor lectus odio, ac fringilla enim ornare vel. Curabitur cursus dui sed erat rhoncus tristique. Aenean cursus semper odio, condimentum ornare sem congue quis. Mauris ut consectetur eros, non bibendum nisl. Fusce justo ex, sollicitudin quis ex sit amet, cursus molestie mi.
 
 Aenean et metus dolor. Nam pretium turpis in blandit fringilla. Aliquam eu tortor orci. Morbi euismod porta nisl ac consequat. Quisque congue nisl quam, sed gravida nulla egestas vitae. Nulla at condimentum sem, nec interdum leo. Sed rhoncus rutrum finibus. Phasellus sit amet lacus pulvinar, malesuada massa venenatis, mattis libero.
@@ -65,6 +68,7 @@ Donec in augue nisi. Duis tempor tortor eu vehicula commodo. Cras accumsan, risu
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
+                android:fontFamily="@font/plusjakartasans_regular"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean libero nibh, rhoncus ut lobortis eget, dictum quis libero. Suspendisse potenti. Pellentesque posuere quam at venenatis consequat. Sed nec felis eget libero pretium faucibus. Nunc consequat quis ex a tincidunt. Morbi eu mauris vitae augue elementum lobortis sit amet vitae tortor. Maecenas eu ornare dui, in congue sapien. Vestibulum auctor lectus odio, ac fringilla enim ornare vel. Curabitur cursus dui sed erat rhoncus tristique. Aenean cursus semper odio, condimentum ornare sem congue quis. Mauris ut consectetur eros, non bibendum nisl. Fusce justo ex, sollicitudin quis ex sit amet, cursus molestie mi.
 
 Aenean et metus dolor. Nam pretium turpis in blandit fringilla. Aliquam eu tortor orci. Morbi euismod porta nisl ac consequat. Quisque congue nisl quam, sed gravida nulla egestas vitae. Nulla at condimentum sem, nec interdum leo. Sed rhoncus rutrum finibus. Phasellus sit amet lacus pulvinar, malesuada massa venenatis, mattis libero.
