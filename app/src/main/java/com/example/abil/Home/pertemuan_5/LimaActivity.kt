@@ -1,39 +1,40 @@
-package com.example.abil.pertemuan_6
+package com.example.abil.Home.pertemuan_5
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.Fragment
 import com.example.abil.R
-import com.example.abil.databinding.ActivityEnamBinding
+import com.example.abil.databinding.ActivityLimaBinding
 
-class EnamActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityEnamBinding
+class LimaActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLimaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityEnamBinding.inflate(layoutInflater)
+        binding = ActivityLimaBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Halaman Pertemuan 6"
+            title = "Halaman Pertemuan 5"
+            subtitle = "Ini adalah subtitle"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
             setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         }
-
-        binding.btnFrag1.setOnClickListener { replaceFragment(SatuFragment()) }
-        binding.btnFrag2.setOnClickListener { replaceFragment(DuaFragment()) }
-        binding.btnFrag3.setOnClickListener { replaceFragment(TigaFragment()) }
+        binding.btnWebView.setOnClickListener {
+            startActivity(Intent(this, WebViewActivity::class.java))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -43,14 +44,22 @@ class EnamActivity : AppCompatActivity() {
                 true
             }
 
+            R.id.action_search -> {
+                Toast.makeText(this, "Search Clicked", Toast.LENGTH_SHORT).show()
+                true
+            }
+
+            R.id.action_settings -> {
+                Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show()
+                true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
 
-    private fun replaceFragment(fragment: Fragment, addToBackStack: Boolean = true) {
-        val transaction = supportFragmentManager.beginTransaction()
-            .replace(binding.fragmentContainer.id, fragment)
-        if (addToBackStack) transaction.addToBackStack(null)
-        transaction.commit()
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
     }
 }

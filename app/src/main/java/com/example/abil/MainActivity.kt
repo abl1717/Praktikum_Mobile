@@ -10,8 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.abil.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
-import com.example.abil.pertemuan_5.LimaActivity
-import com.example.abil.pertemuan_6.EnamActivity
+import com.example.abil.Home.pertemuan_5.LimaActivity
+import com.example.abil.Home.pertemuan_6.EnamActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
