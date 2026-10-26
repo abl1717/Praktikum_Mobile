@@ -11,13 +11,14 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.abil.Home.pertemuan_5.LimaActivity
 import com.example.abil.Home.pertemuan_6.EnamActivity
+import com.example.abil.Home.pertemuan_9.NinthActivity
 import com.example.abil.LoginActivity
 import com.example.abil.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
 class HomeFragment : Fragment() {
-    private var _binding: FragmentHomeBinding?= null
+    private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +26,7 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_home, container, false)
-    _binding = FragmentHomeBinding.inflate(inflater, container,false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -67,6 +68,10 @@ class HomeFragment : Fragment() {
 
         binding.btnEnam.setOnClickListener {
             startActivity(Intent(requireContext(), EnamActivity::class.java))
+        }
+
+        binding.btnNine.setOnClickListener {
+            startActivity(Intent(requireContext(), NinthActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {
