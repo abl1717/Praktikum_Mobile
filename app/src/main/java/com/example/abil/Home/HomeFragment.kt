@@ -14,6 +14,7 @@ import com.example.abil.Home.pertemuan_6.EnamActivity
 import com.example.abil.Home.pertemuan_9.NinthActivity
 import com.example.abil.LoginActivity
 import com.example.abil.databinding.FragmentHomeBinding
+import com.example.abil.pertemuan_10.TenthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
@@ -72,6 +73,9 @@ class HomeFragment : Fragment() {
 
         binding.btnNine.setOnClickListener {
             startActivity(Intent(requireContext(), NinthActivity::class.java))
+        }
+        binding.btnTen.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {
