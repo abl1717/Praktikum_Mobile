@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.abil.Home.HomeFragment
 import com.example.abil.Message.MessageFragment
 import com.example.abil.More.MoreFragment
+import com.example.abil.Note.NoteFragment
 import com.example.abil.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -45,11 +46,18 @@ class BaseActivity : AppCompatActivity() {
                     true
                 }
 
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
+                    true
+                }
+
                 else -> false // false jika item tidak dikenal
             }
         }
     }
-    private fun replaceFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().replace(binding.fragmentContainer.id,fragment).commit()
+
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(binding.fragmentContainer.id, fragment)
+            .commit()
     }
 }
